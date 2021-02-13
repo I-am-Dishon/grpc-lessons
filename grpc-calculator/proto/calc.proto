@@ -12,6 +12,29 @@ message AddResponse {
 	int32 Result = 1;
 }
 
+message PrimeNumberRequest {
+    int64 first_number = 1;
+}
+
+message PrimeNumberResponse {
+	int64 Result = 1;
+}
+
+message ComputeAverageRequest {
+    int32 number = 1;
+}
+
+message ComputeAverageResponse {
+	double average = 1;
+}
+
 service AddService {
+    //unary
 	rpc Add(AddRequest) returns (AddResponse) {}
+
+    //Server  streaming
+	rpc PrimeNumbers(PrimeNumberRequest) returns (stream PrimeNumberResponse) {};
+
+	//Client Streaming
+	rpc ComputeAverage(stream ComputeAverageRequest) returns (ComputeAverageResponse) {};
 }

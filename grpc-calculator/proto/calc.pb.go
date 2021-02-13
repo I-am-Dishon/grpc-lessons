@@ -126,6 +126,194 @@ func (x *AddResponse) GetResult() int32 {
 	return 0
 }
 
+type PrimeNumberRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	FirstNumber int64 `protobuf:"varint,1,opt,name=first_number,json=firstNumber,proto3" json:"first_number,omitempty"`
+}
+
+func (x *PrimeNumberRequest) Reset() {
+	*x = PrimeNumberRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_grpc_calculator_proto_calc_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PrimeNumberRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PrimeNumberRequest) ProtoMessage() {}
+
+func (x *PrimeNumberRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_grpc_calculator_proto_calc_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PrimeNumberRequest.ProtoReflect.Descriptor instead.
+func (*PrimeNumberRequest) Descriptor() ([]byte, []int) {
+	return file_grpc_calculator_proto_calc_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *PrimeNumberRequest) GetFirstNumber() int64 {
+	if x != nil {
+		return x.FirstNumber
+	}
+	return 0
+}
+
+type PrimeNumberResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Result int64 `protobuf:"varint,1,opt,name=Result,proto3" json:"Result,omitempty"`
+}
+
+func (x *PrimeNumberResponse) Reset() {
+	*x = PrimeNumberResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_grpc_calculator_proto_calc_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PrimeNumberResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PrimeNumberResponse) ProtoMessage() {}
+
+func (x *PrimeNumberResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_grpc_calculator_proto_calc_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PrimeNumberResponse.ProtoReflect.Descriptor instead.
+func (*PrimeNumberResponse) Descriptor() ([]byte, []int) {
+	return file_grpc_calculator_proto_calc_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *PrimeNumberResponse) GetResult() int64 {
+	if x != nil {
+		return x.Result
+	}
+	return 0
+}
+
+type ComputeAverageRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Number int32 `protobuf:"varint,1,opt,name=number,proto3" json:"number,omitempty"`
+}
+
+func (x *ComputeAverageRequest) Reset() {
+	*x = ComputeAverageRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_grpc_calculator_proto_calc_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ComputeAverageRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ComputeAverageRequest) ProtoMessage() {}
+
+func (x *ComputeAverageRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_grpc_calculator_proto_calc_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ComputeAverageRequest.ProtoReflect.Descriptor instead.
+func (*ComputeAverageRequest) Descriptor() ([]byte, []int) {
+	return file_grpc_calculator_proto_calc_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *ComputeAverageRequest) GetNumber() int32 {
+	if x != nil {
+		return x.Number
+	}
+	return 0
+}
+
+type ComputeAverageResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Average float64 `protobuf:"fixed64,1,opt,name=average,proto3" json:"average,omitempty"`
+}
+
+func (x *ComputeAverageResponse) Reset() {
+	*x = ComputeAverageResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_grpc_calculator_proto_calc_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ComputeAverageResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ComputeAverageResponse) ProtoMessage() {}
+
+func (x *ComputeAverageResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_grpc_calculator_proto_calc_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ComputeAverageResponse.ProtoReflect.Descriptor instead.
+func (*ComputeAverageResponse) Descriptor() ([]byte, []int) {
+	return file_grpc_calculator_proto_calc_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *ComputeAverageResponse) GetAverage() float64 {
+	if x != nil {
+		return x.Average
+	}
+	return 0
+}
+
 var File_grpc_calculator_proto_calc_proto protoreflect.FileDescriptor
 
 var file_grpc_calculator_proto_calc_proto_rawDesc = []byte{
@@ -139,12 +327,36 @@ var file_grpc_calculator_proto_calc_proto_rawDesc = []byte{
 	0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0c, 0x73, 0x65, 0x63, 0x6f, 0x6e, 0x64, 0x4e, 0x75,
 	0x6d, 0x62, 0x65, 0x72, 0x22, 0x25, 0x0a, 0x0b, 0x41, 0x64, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f,
 	0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x05, 0x52, 0x06, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0x46, 0x0a, 0x0a, 0x41,
-	0x64, 0x64, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x38, 0x0a, 0x03, 0x41, 0x64, 0x64,
-	0x12, 0x16, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x41, 0x64,
-	0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75,
-	0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x41, 0x64, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x00, 0x42, 0x0e, 0x5a, 0x0c, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f,
+	0x01, 0x28, 0x05, 0x52, 0x06, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x37, 0x0a, 0x12, 0x50,
+	0x72, 0x69, 0x6d, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x12, 0x21, 0x0a, 0x0c, 0x66, 0x69, 0x72, 0x73, 0x74, 0x5f, 0x6e, 0x75, 0x6d, 0x62, 0x65,
+	0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0b, 0x66, 0x69, 0x72, 0x73, 0x74, 0x4e, 0x75,
+	0x6d, 0x62, 0x65, 0x72, 0x22, 0x2d, 0x0a, 0x13, 0x50, 0x72, 0x69, 0x6d, 0x65, 0x4e, 0x75, 0x6d,
+	0x62, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x52,
+	0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x52, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x22, 0x2f, 0x0a, 0x15, 0x43, 0x6f, 0x6d, 0x70, 0x75, 0x74, 0x65, 0x41, 0x76,
+	0x65, 0x72, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06,
+	0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x6e, 0x75,
+	0x6d, 0x62, 0x65, 0x72, 0x22, 0x32, 0x0a, 0x16, 0x43, 0x6f, 0x6d, 0x70, 0x75, 0x74, 0x65, 0x41,
+	0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18,
+	0x0a, 0x07, 0x61, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x01, 0x52,
+	0x07, 0x61, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x32, 0xf8, 0x01, 0x0a, 0x0a, 0x41, 0x64, 0x64,
+	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x38, 0x0a, 0x03, 0x41, 0x64, 0x64, 0x12, 0x16,
+	0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x41, 0x64, 0x64, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61,
+	0x74, 0x6f, 0x72, 0x2e, 0x41, 0x64, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
+	0x00, 0x12, 0x53, 0x0a, 0x0c, 0x50, 0x72, 0x69, 0x6d, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72,
+	0x73, 0x12, 0x1e, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x50,
+	0x72, 0x69, 0x6d, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x1f, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x50,
+	0x72, 0x69, 0x6d, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x22, 0x00, 0x30, 0x01, 0x12, 0x5b, 0x0a, 0x0e, 0x43, 0x6f, 0x6d, 0x70, 0x75, 0x74,
+	0x65, 0x41, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x12, 0x21, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75,
+	0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x43, 0x6f, 0x6d, 0x70, 0x75, 0x74, 0x65, 0x41, 0x76, 0x65,
+	0x72, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x22, 0x2e, 0x63, 0x61,
+	0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x43, 0x6f, 0x6d, 0x70, 0x75, 0x74, 0x65,
+	0x41, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
+	0x00, 0x28, 0x01, 0x42, 0x0e, 0x5a, 0x0c, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f,
 	0x72, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
@@ -160,16 +372,24 @@ func file_grpc_calculator_proto_calc_proto_rawDescGZIP() []byte {
 	return file_grpc_calculator_proto_calc_proto_rawDescData
 }
 
-var file_grpc_calculator_proto_calc_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_grpc_calculator_proto_calc_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_grpc_calculator_proto_calc_proto_goTypes = []interface{}{
-	(*AddRequest)(nil),  // 0: calculator.AddRequest
-	(*AddResponse)(nil), // 1: calculator.AddResponse
+	(*AddRequest)(nil),             // 0: calculator.AddRequest
+	(*AddResponse)(nil),            // 1: calculator.AddResponse
+	(*PrimeNumberRequest)(nil),     // 2: calculator.PrimeNumberRequest
+	(*PrimeNumberResponse)(nil),    // 3: calculator.PrimeNumberResponse
+	(*ComputeAverageRequest)(nil),  // 4: calculator.ComputeAverageRequest
+	(*ComputeAverageResponse)(nil), // 5: calculator.ComputeAverageResponse
 }
 var file_grpc_calculator_proto_calc_proto_depIdxs = []int32{
 	0, // 0: calculator.AddService.Add:input_type -> calculator.AddRequest
-	1, // 1: calculator.AddService.Add:output_type -> calculator.AddResponse
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
+	2, // 1: calculator.AddService.PrimeNumbers:input_type -> calculator.PrimeNumberRequest
+	4, // 2: calculator.AddService.ComputeAverage:input_type -> calculator.ComputeAverageRequest
+	1, // 3: calculator.AddService.Add:output_type -> calculator.AddResponse
+	3, // 4: calculator.AddService.PrimeNumbers:output_type -> calculator.PrimeNumberResponse
+	5, // 5: calculator.AddService.ComputeAverage:output_type -> calculator.ComputeAverageResponse
+	3, // [3:6] is the sub-list for method output_type
+	0, // [0:3] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -205,6 +425,54 @@ func file_grpc_calculator_proto_calc_proto_init() {
 				return nil
 			}
 		}
+		file_grpc_calculator_proto_calc_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PrimeNumberRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_grpc_calculator_proto_calc_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PrimeNumberResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_grpc_calculator_proto_calc_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ComputeAverageRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_grpc_calculator_proto_calc_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ComputeAverageResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -212,7 +480,7 @@ func file_grpc_calculator_proto_calc_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_grpc_calculator_proto_calc_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -238,7 +506,12 @@ const _ = grpc.SupportPackageIsVersion6
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type AddServiceClient interface {
+	//unary
 	Add(ctx context.Context, in *AddRequest, opts ...grpc.CallOption) (*AddResponse, error)
+	//Server  streaming
+	PrimeNumbers(ctx context.Context, in *PrimeNumberRequest, opts ...grpc.CallOption) (AddService_PrimeNumbersClient, error)
+	//Client Streaming
+	ComputeAverage(ctx context.Context, opts ...grpc.CallOption) (AddService_ComputeAverageClient, error)
 }
 
 type addServiceClient struct {
@@ -258,9 +531,80 @@ func (c *addServiceClient) Add(ctx context.Context, in *AddRequest, opts ...grpc
 	return out, nil
 }
 
+func (c *addServiceClient) PrimeNumbers(ctx context.Context, in *PrimeNumberRequest, opts ...grpc.CallOption) (AddService_PrimeNumbersClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_AddService_serviceDesc.Streams[0], "/calculator.AddService/PrimeNumbers", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &addServicePrimeNumbersClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type AddService_PrimeNumbersClient interface {
+	Recv() (*PrimeNumberResponse, error)
+	grpc.ClientStream
+}
+
+type addServicePrimeNumbersClient struct {
+	grpc.ClientStream
+}
+
+func (x *addServicePrimeNumbersClient) Recv() (*PrimeNumberResponse, error) {
+	m := new(PrimeNumberResponse)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+func (c *addServiceClient) ComputeAverage(ctx context.Context, opts ...grpc.CallOption) (AddService_ComputeAverageClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_AddService_serviceDesc.Streams[1], "/calculator.AddService/ComputeAverage", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &addServiceComputeAverageClient{stream}
+	return x, nil
+}
+
+type AddService_ComputeAverageClient interface {
+	Send(*ComputeAverageRequest) error
+	CloseAndRecv() (*ComputeAverageResponse, error)
+	grpc.ClientStream
+}
+
+type addServiceComputeAverageClient struct {
+	grpc.ClientStream
+}
+
+func (x *addServiceComputeAverageClient) Send(m *ComputeAverageRequest) error {
+	return x.ClientStream.SendMsg(m)
+}
+
+func (x *addServiceComputeAverageClient) CloseAndRecv() (*ComputeAverageResponse, error) {
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	m := new(ComputeAverageResponse)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
 // AddServiceServer is the server API for AddService service.
 type AddServiceServer interface {
+	//unary
 	Add(context.Context, *AddRequest) (*AddResponse, error)
+	//Server  streaming
+	PrimeNumbers(*PrimeNumberRequest, AddService_PrimeNumbersServer) error
+	//Client Streaming
+	ComputeAverage(AddService_ComputeAverageServer) error
 }
 
 // UnimplementedAddServiceServer can be embedded to have forward compatible implementations.
@@ -269,6 +613,12 @@ type UnimplementedAddServiceServer struct {
 
 func (*UnimplementedAddServiceServer) Add(context.Context, *AddRequest) (*AddResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Add not implemented")
+}
+func (*UnimplementedAddServiceServer) PrimeNumbers(*PrimeNumberRequest, AddService_PrimeNumbersServer) error {
+	return status.Errorf(codes.Unimplemented, "method PrimeNumbers not implemented")
+}
+func (*UnimplementedAddServiceServer) ComputeAverage(AddService_ComputeAverageServer) error {
+	return status.Errorf(codes.Unimplemented, "method ComputeAverage not implemented")
 }
 
 func RegisterAddServiceServer(s *grpc.Server, srv AddServiceServer) {
@@ -293,6 +643,53 @@ func _AddService_Add_Handler(srv interface{}, ctx context.Context, dec func(inte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AddService_PrimeNumbers_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(PrimeNumberRequest)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
+	}
+	return srv.(AddServiceServer).PrimeNumbers(m, &addServicePrimeNumbersServer{stream})
+}
+
+type AddService_PrimeNumbersServer interface {
+	Send(*PrimeNumberResponse) error
+	grpc.ServerStream
+}
+
+type addServicePrimeNumbersServer struct {
+	grpc.ServerStream
+}
+
+func (x *addServicePrimeNumbersServer) Send(m *PrimeNumberResponse) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func _AddService_ComputeAverage_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(AddServiceServer).ComputeAverage(&addServiceComputeAverageServer{stream})
+}
+
+type AddService_ComputeAverageServer interface {
+	SendAndClose(*ComputeAverageResponse) error
+	Recv() (*ComputeAverageRequest, error)
+	grpc.ServerStream
+}
+
+type addServiceComputeAverageServer struct {
+	grpc.ServerStream
+}
+
+func (x *addServiceComputeAverageServer) SendAndClose(m *ComputeAverageResponse) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func (x *addServiceComputeAverageServer) Recv() (*ComputeAverageRequest, error) {
+	m := new(ComputeAverageRequest)
+	if err := x.ServerStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
 var _AddService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "calculator.AddService",
 	HandlerType: (*AddServiceServer)(nil),
@@ -302,6 +699,17 @@ var _AddService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _AddService_Add_Handler,
 		},
 	},
-	Streams:  []grpc.StreamDesc{},
+	Streams: []grpc.StreamDesc{
+		{
+			StreamName:    "PrimeNumbers",
+			Handler:       _AddService_PrimeNumbers_Handler,
+			ServerStreams: true,
+		},
+		{
+			StreamName:    "ComputeAverage",
+			Handler:       _AddService_ComputeAverage_Handler,
+			ClientStreams: true,
+		},
+	},
 	Metadata: "grpc-calculator/proto/calc.proto",
 }
