@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package calculator;
+option go_package= "calculatorpb";
+
+message AddRequest {
+    int32 first_number = 1;
+    int32 second_number = 2;
+}
+
+message AddResponse {
+	int32 Result = 1;
+}
+
+service AddService {
+	rpc Add(AddRequest) returns (AddResponse) {}
+}
